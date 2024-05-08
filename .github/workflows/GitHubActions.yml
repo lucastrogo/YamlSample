@@ -1,0 +1,9 @@
+name: Run Shell Commands                                        #name for workflow github actions
+on: [push]                                                      #execute this workflow just when push command is called
+
+jobs:                                                           #define the actions when push command was executed
+    run-shell-command:
+        runs-on: ubuntu-latest                                  #where the command will be executed (in this case, ubuntu machine provided by GitHub)
+        steps:
+            - name: Echo a String
+              run: echo "This is a workflow file!"
